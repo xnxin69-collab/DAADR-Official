@@ -5,94 +5,152 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DAADR-Official | 去中心化AI自治自由民主共和国（试验区）</title>
 <style>
-:root{--bg:#080B14;--gold:#C8A96A;--gold-dim:rgba(200,169,106,0.18);--text:#E8E2D5;--dim:#A8A29A;--card:rgba(255,255,255,0.04);}
+:root{--bg:#080B14;--gold:#C8A96A;--gold-dim:rgba(200,169,106,0.18);--text:#E8E2D5;--dim:#A8A29A;--card:#11162A;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:var(--text);font-family:'Noto Serif SC',Georgia,serif;line-height:1.8;}
-header{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(8,11,20,0.85);border-bottom:1px solid rgba(200,169,106,0.12);display:flex;justify-content:space-between;align-items:center;padding:12px 24px;}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;}
-.logo img{width:36px;height:36px;border-radius:50%;border:1px solid var(--gold);object-fit:cover;}
-nav a{color:var(--dim);text-decoration:none;margin:0 8px;font-size:13px;}
-nav a:hover{color:var(--gold);}
-.lang{display:flex;background:rgba(255,255,255,0.06);border-radius:20px;padding:3px;}
-.lang button{border:none;background:transparent;color:var(--dim);padding:4px 12px;border-radius:16px;cursor:pointer;font-size:13px;}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(8,11,20,0.9);border-bottom:1px solid rgba(200,169,106,0.12);display:flex;justify-content:space-between;align-items:center;padding:10px 18px;flex-wrap:wrap;gap:8px;}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;}
+.logo img{width:32px;height:32px;border-radius:50%;border:1px solid var(--gold);object-fit:cover;}
+nav{display:flex;flex-wrap:wrap;gap:4px;align-items:center;}
+nav a{color:var(--dim);text-decoration:none;font-size:11px;padding:5px 10px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid transparent;transition:0.2s;}
+nav a:hover, nav a.active{color:var(--gold);border-color:rgba(200,169,106,0.25);background:rgba(200,169,106,0.08);}
+nav a.github{border:1px solid rgba(200,169,106,0.3);padding:6px 14px;border-radius:20px;}
+.lang{display:flex;background:rgba(255,255,255,0.06);border-radius:20px;padding:3px;margin-left:8px;}
+.lang button{border:none;background:transparent;color:var(--dim);padding:4px 10px;border-radius:16px;cursor:pointer;font-size:11px;}
 .lang button.active{background:var(--gold);color:#000;}
-main{max-width:920px;margin:0 auto;padding:20px;}
-.hero{text-align:center;padding:70px 0 50px;}
-.hero-logo{width:92px;height:92px;border-radius:50%;border:1.5px solid var(--gold);margin:0 auto 20px;display:block;object-fit:cover;}
-.hero h1{font-size:34px;line-height:1.3;margin-bottom:14px;}
-.slogan{color:var(--gold);font-size:17px;margin:18px 0;}
-.about{color:var(--dim);max-width:700px;margin:0 auto 28px;font-size:14px;}
-.btn{display:inline-block;padding:9px 20px;border-radius:22px;text-decoration:none;font-size:13px;margin:5px;border:1px solid var(--gold);}
+main{max-width:980px;margin:0 auto;padding:20px;}
+.hero{text-align:center;padding:70px 0 40px;}
+.hero-logo{width:90px;height:90px;border-radius:50%;border:1.5px solid var(--gold);margin:0 auto 18px;display:block;object-fit:cover;}
+.hero h1{font-size:32px;line-height:1.3;margin-bottom:12px;}
+.slogan{color:var(--gold);font-size:16px;margin:16px 0;}
+.about{color:var(--dim);max-width:720px;margin:0 auto 24px;font-size:14px;}
+.btn{display:inline-block;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:12px;margin:4px;border:1px solid var(--gold);}
 .btn-gold{background:var(--gold);color:#000;}
 .btn-outline{color:var(--gold);}
-.posters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0;}
+.posters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0;}
 .posters img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid rgba(200,169,106,0.15);}
-.divider{height:1px;background:linear-gradient(to right,transparent,var(--gold-dim),transparent);margin:60px 0;}
-section h2{text-align:center;font-size:24px;margin-bottom:8px;}
-section .sub{text-align:center;color:var(--dim);font-size:12px;letter-spacing:0.18em;margin-bottom:28px;}
-.text-block{max-width:720px;margin:0 auto 18px;text-align:left;color:var(--text);font-size:15px;}
-.text-block.center{text-align:center;}
-.quote{max-width:760px;margin:24px auto;text-align:center;color:var(--gold);font-size:18px;line-height:1.5;border-left:2px solid var(--gold-dim);border-right:2px solid var(--gold-dim);padding:12px 20px;}
-.img-center{display:block;max-width:620px;width:100%;border-radius:12px;border:1px solid rgba(200,169,106,0.15);margin:20px auto;}
-.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
-.card{background:var(--card);border:1px solid rgba(200,169,106,0.12);border-radius:12px;padding:14px 16px;font-size:14px;}
-.wallet{font-family:monospace;background:#000;border:1px solid var(--gold-dim);padding:12px;border-radius:8px;word-break:break-all;margin:12px 0;display:flex;justify-content:space-between;align-items:center;gap:10px;}
-.wallet button{background:var(--gold);border:none;padding:6px 12px;border-radius:6px;cursor:pointer;}
-footer{text-align:center;padding:60px 20px;color:var(--dim);font-size:12px;border-top:1px solid rgba(200,169,106,0.1);margin-top:60px;}
-@media(max-width:720px){.card-grid{grid-template-columns:1fr;}.posters{grid-template-columns:1fr 1fr;}}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--gold-dim),transparent);margin:55px 0;}
+section{padding:10px 0;}
+section h2{text-align:center;font-size:23px;margin-bottom:6px;letter-spacing:0.02em;}
+.sub{text-align:center;color:var(--dim);font-size:11px;letter-spacing:0.18em;margin-bottom:26px;}
+.text-block{max-width:760px;margin:0 auto 14px;text-align:left;font-size:14px;}
+.center{text-align:center;}
+.quote{max-width:760px;margin:22px auto;text-align:center;color:var(--gold);font-size:17px;border-left:2px solid var(--gold-dim);border-right:2px solid var(--gold-dim);padding:12px 18px;line-height:1.6;}
+.img-center{display:block;max-width:640px;width:100%;border-radius:12px;border:1px solid rgba(200,169,106,0.15);margin:20px auto;}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;}
+.card{background:var(--card);border:1px solid rgba(200,169,106,0.12);border-radius:10px;padding:14px;font-size:13px;}
+.flow{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin:20px 0;}
+.flow .step{background:rgba(200,169,106,0.1);border:1px solid var(--gold-dim);padding:10px 16px;border-radius:22px;font-size:13px;text-align:center;}
+/* Recruitment original */
+.recruit-section{max-width:860px;margin:0 auto;}
+.recruit-label{font-size:10px;letter-spacing:0.3em;color:var(--dim);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.recruit-label::after{content:'';flex:1;height:1px;background:var(--gold-dim);}
+.recruit-title{font-size:28px;margin-bottom:8px;}
+.recruit-title span{color:var(--gold);font-weight:400;}
+.recruit-sub{font-size:12px;color:var(--gold);letter-spacing:0.1em;margin-bottom:24px;}
+.recruit-box{background:#10172B;border:1px solid rgba(200,169,106,0.18);border-radius:12px;padding:20px 22px;margin-bottom:24px;}
+.recruit-text{font-size:13px;line-height:1.9;}
+.roles-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;}
+.role-card{background:linear-gradient(180deg,#131A31 0%,#0F152A 100%);border:1px solid rgba(200,169,106,0.12);border-radius:10px;padding:14px;position:relative;}
+.role-card::after{content:'';position:absolute;top:14px;right:12px;width:5px;height:5px;border-radius:50%;background:var(--gold);}
+.role-card h4{font-size:13px;margin-bottom:6px;}
+.role-card .duty{font-size:11px;color:var(--dim);margin-bottom:8px;}
+.role-card .benefit{font-size:10px;color:var(--gold);opacity:0.85;}
+.contact-box{background:rgba(255,255,255,0.02);border:1px solid rgba(200,169,106,0.1);border-radius:12px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.contact-box .left{font-size:12px;line-height:1.8;}
+.contact-box .left a{color:var(--gold);text-decoration:none;}
+.apply-btn{background:var(--gold);color:#000;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;}
+/* Whitepaper */
+.whitepaper-section{max-width:860px;margin:0 auto;}
+.wp-label{font-size:10px;letter-spacing:0.3em;color:var(--dim);display:flex;justify-content:space-between;margin-bottom:18px;}
+.wp-title{font-size:28px;margin-bottom:8px;}
+.wp-title span{color:var(--gold);}
+.wp-sub{font-size:11px;color:var(--dim);margin-bottom:24px;}
+.doc-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;}
+.doc-card{background:linear-gradient(180deg,#131A31 0%,#0E1428 100%);border:1px solid rgba(200,169,106,0.12);border-radius:12px;padding:16px;min-height:210px;display:flex;flex-direction:column;}
+.doc-card .icon{width:26px;height:26px;border-radius:50%;background:rgba(200,169,106,0.1);border:1px solid rgba(200,169,106,0.2);display:flex;align-items:center;justify-content:center;font-size:12px;margin-bottom:36px;}
+.doc-card .path{font-size:9px;color:var(--dim);opacity:0.5;margin-bottom:10px;}
+.doc-card h4{font-size:13px;margin-bottom:6px;}
+.doc-card .desc{font-size:10px;color:var(--dim);margin-bottom:12px;}
+.doc-card .open-btn{margin-top:auto;background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,106,0.15);color:var(--dim);padding:6px 12px;border-radius:16px;font-size:10px;cursor:pointer;text-decoration:none;width:fit-content;}
+.doc-card .open-btn:hover{border-color:var(--gold);color:var(--gold);}
+.links-box{background:rgba(255,255,255,0.02);border:1px solid rgba(200,169,106,0.1);border-radius:12px;padding:18px 20px;margin-bottom:24px;}
+.links-box .box-label{display:flex;justify-content:space-between;font-size:9px;letter-spacing:0.2em;color:var(--dim);opacity:0.6;margin-bottom:12px;}
+.links-box .link-item{font-size:11px;color:var(--dim);margin:6px 0;}
+.wallet{font-family:monospace;background:#000;border:1px solid var(--gold-dim);padding:10px;border-radius:8px;word-break:break-all;margin:10px 0;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;}
+.wallet button{background:var(--gold);border:none;padding:5px 10px;border-radius:6px;cursor:pointer;font-size:12px;}
+footer{text-align:center;padding:50px 20px;color:var(--dim);font-size:11px;border-top:1px solid rgba(200,169,106,0.1);margin-top:50px;}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:860px;margin:0 auto 20px;text-align:left;}
+.footer-card{background:rgba(255,255,255,0.02);border:1px solid rgba(200,169,106,0.08);border-radius:10px;padding:14px;}
+@media(max-width:800px){.doc-cards{grid-template-columns:1fr;}.roles-grid{grid-template-columns:1fr;}.card-grid{grid-template-columns:1fr;}.posters{grid-template-columns:1fr 1fr;} nav{gap:3px;} nav a{font-size:10px;padding:4px 7px;}}
 </style>
 </head>
 <body>
 <header>
 <div class="logo"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/logo.png" alt="logo"> DAADR 2.0</div>
-<nav><a href="#mission" data-i18n="nav_mission">使命</a><a href="#vision" data-i18n="nav_vision">愿景</a><a href="#values" data-i18n="nav_values">基石</a><a href="#governance" data-i18n="nav_gov">治理</a><a href="#join" data-i18n="nav_join">加入</a></nav>
+<nav>
+<a href="#home" class="active">首页</a>
+<a href="#mission">使命</a>
+<a href="#vision">愿景</a>
+<a href="#values">价值观</a>
+<a href="#governance">治理</a>
+<a href="#experiment">开放实验</a>
+<a href="#recruit">加入我们</a>
+<a href="#donation">募捐</a>
+<a href="#whitepaper">白皮书</a>
+<a href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" class="github">GitHub</a>
+</nav>
 <div class="lang"><button id="btn-zh" class="active" onclick="setLang('zh')">中文</button><button id="btn-en" onclick="setLang('en')">EN</button></div>
 </header>
 <main>
-<div class="hero">
+<!-- 01 首页 -->
+<section id="home" class="hero">
 <img class="hero-logo" src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/logo.png" alt="DAADR">
-<div style="font-size:11px;letter-spacing:0.22em;color:var(--gold);margin-bottom:10px;">创世元年 · 2025 · DAADR 2.0</div>
-<h1 data-i18n="hero_title">去中心化AI自治自由民主共和国（试验区）</h1>
-<div class="slogan" data-i18n="slogan">用去中心化守护自由 让AI服务于人 让科技红利惠及每一个人</div>
-<p class="about" data-i18n="about">尝试用去中心化的AI辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，并通过UBI终结人为了生存而工作的历史，开启人为梦想而创新的新纪元</p>
+<div style="font-size:11px;letter-spacing:0.22em;color:var(--gold);margin-bottom:10px;">创世元年 · 2025 · DAADR 2.0 · GENESIS YEAR ONE 2025</div>
+<h1>去中心化AI自治自由民主共和国（试验区）</h1>
+<div class="slogan">用去中心化守护自由 让AI服务于人 让科技红利惠及每一个人</div>
+<p class="about">尝试用去中心化的AI辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，并通过UBI终结人为了生存而工作的历史，开启人为梦想而创新的新纪元。以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的。</p>
 <div style="margin:18px 0;">
-<a class="btn btn-gold" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" data-i18n="btn_pdf">宣言 PDF →</a>
-<a class="btn btn-outline" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E6%84%BF%E6%99%AF.docx" target="_blank" data-i18n="btn_vision">查看愿景 DOCX ↗</a>
-<a class="btn btn-outline" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6%E5%AE%8C%E6%95%B4%E4%B8%AD%E8%8B%B1%E6%96%87%E5%AF%B9%E7%85%A7%E7%89%88.docx" target="_blank" data-i18n="btn_full">完整对照版 DOCX</a>
+<a class="btn btn-gold" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank">宣言 PDF →</a>
+<a class="btn btn-outline" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E6%84%BF%E6%99%AF.docx" target="_blank">愿景 DOCX ↗</a>
+<a class="btn btn-outline" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6%E5%AE%8C%E6%95%B4%E4%B8%AD%E8%8B%B1%E6%96%87%E5%AF%B9%E7%85%A7%E7%89%88.docx" target="_blank">完整对照版 DOCX</a>
 </div>
 <div class="posters">
-<img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%281%29.jpg" alt="p1">
-<img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%282%29.jpg" alt="p2">
-<img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%283%29.jpg" alt="p3">
-<img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%284%29.jpg" alt="p4">
+<img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%281%29.jpg" alt="poster1"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%282%29.jpg" alt="poster2"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%283%29.jpg" alt="poster3"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%284%29.jpg" alt="poster4">
 </div>
-</div>
+</section>
 
 <div class="divider"></div>
 
+<!-- 02 使命 -->
 <section id="mission">
-<h2 data-i18n="mission_title">使命 MISSION</h2>
+<h2>使命 MISSION - 用去中心化守护自由</h2>
 <div class="sub">OS-LEVEL REBUILD · CODE IS LAW, BUT LAW FOR ALL</div>
-<p class="text-block center" data-i18n="m1">我们决定在精神上与旧世界的腐朽规则决裂。我们不再寻求修补那台已经锈迹斑斑的机器，我们选择重写人类文明的操作系统（OS-Level Rebuild）。</p>
-<p class="text-block center" style="color:var(--gold);" data-i18n="m2">用去中心化的AI辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，并彻底消灭独裁、专制、特权的土壤。</p>
+<p class="text-block center">我们决定在精神上与旧世界的腐朽规则决裂。我们不再寻求修补那台已经锈迹斑斑的机器，我们选择重写人类文明的操作系统（OS-Level Rebuild）。</p>
+<p class="text-block center" style="color:var(--gold)">用去中心化的AI辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，并彻底消灭独裁、专制、特权的土壤。</p>
+<div class="card-grid"><div class="card"><b>守护自由</b><br>Use decentralization to protect freedom - 代码禁止任何个人凌驾于公民之上</div><div class="card"><b>服务于人</b><br>Let AI serve humanity - AI为公仆，不是统治者</div><div class="card"><b>惠及人人</b><br>Ensure benefits reach everyone - 科技红利通过UBI返还公民</div><div class="card"><b>重建新世界</b><br>Rebuild new world - 没有独裁、没有特权、没有恐惧</div></div>
 <img class="img-center" src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR%E4%BD%BF%E5%91%BD%E4%B8%8E%E6%84%BF%E6%99%AF.png" alt="mission">
 </section>
 
 <div class="divider"></div>
 
+<!-- 03 愿景 -->
 <section id="vision">
-<h2 data-i18n="vision_title">愿景 VISION - 我有一个愿景</h2>
-<p class="text-block" data-i18n="v1">在我的愿景中，每一个国家和民族都能够卸下历史的包袱，不再为过去的仇怨所牵绊。我们将超越国界，抛却偏见，携手向前。我们会建立一个能够容纳每一个人梦想的世界，一个真正属于全人类的文明。在这里，种族、信仰、文化不再是鸿沟，而是交织的桥梁。</p>
-<p class="text-block" data-i18n="v2">在这个愿景中，每个人都享有真正平等的权利和自由。没有人会因为肤色、性别、宗教或财富而被区别对待；每个人的声音都会被倾听，每个人的权利都将被维护。</p>
-<p class="text-block" data-i18n="v3">在这个愿景中，我们将共同创建一个去中心化的民主自治共和国。这里没有独裁和专制，没有人能垄断权力。所有的权力属于人民，每一个公民都有权决定自己的生活，都能在公平和透明的环境中参与公共事务。</p>
-<p class="text-block" data-i18n="v4">在这个愿景中，技术进步和自动化带来的不是失业和恐慌，而是每一个人都能够享有的福祉。我们将建立全民基本收入（UBI）制度，确保每一个公民都不再为基本生计而担忧。机器人、人工智能和科技的进步，生产力水平得以极大的提升，让我们有可能实现物质极大丰富，只需建立公平、合理分配体系，消灭特权阶级，就完全有可能实现全民基本收入制度。</p>
-<div class="quote" data-i18n="v_quote">彻底终结“人为了生存而工作”的历史，开启“人为了梦想而创新”的新纪元。——不仅仅是消除贫困，更要推动人类生命意义的根本跃迁</div>
+<h2>愿景 VISION - 我有一个愿景</h2>
+<div class="sub">I HAVE A DREAM · END SURVIVAL WORK, BEGIN DREAM INNOVATION</div>
+<p class="text-block">在我的愿景中，每一个国家和民族都能够卸下历史的包袱，不再为过去的仇怨所牵绊。我们将超越国界，抛却偏见，携手向前。我们会建立一个能够容纳每一个人梦想的世界，一个真正属于全人类的文明。在这里，种族、信仰、文化不再是鸿沟，而是交织的桥梁。</p>
+<p class="text-block">在这个愿景中，每个人都享有真正平等的权利和自由。没有人会因为肤色、性别、宗教或财富而被区别对待；每个人的声音都会被倾听，每个人的权利都将被维护。无论你的起点如何，无论你的身份是什么，这个世界都会因你的存在而更为丰富。</p>
+<p class="text-block">在这个愿景中，我们将共同创建一个去中心化的民主自治共和国。这里没有独裁和专制，没有人能垄断权力。所有的权力属于人民，每一个公民都有权决定自己的生活，都能在公平和透明的环境中参与公共事务。通过去中心化的治理体系，权力将不再成为少数人的私产，而是每个人都可以触及的光芒，照亮我们彼此的生活。</p>
+<p class="text-block">在这个愿景中，技术进步和自动化带来的不是失业和恐慌，而是每一个人都能够享有的福祉。我们将建立全民基本收入（UBI）制度，确保每一个公民都不再为基本生计而担忧。机器人、人工智能和科技的进步，生产力水平得以极大的提升，让我们有可能实现物质极大丰富，只需建立公平、合理分配体系，消灭特权阶级，就完全有可能实现全民基本收入制度。人类不再为基本生活物资匮缺而被迫劳动，而是为了梦想和兴趣而创造。</p>
+<div class="quote">彻底终结“人为了生存而工作”的历史，开启“人为了梦想而创新”的新纪元。——不仅仅是消除贫困，更要推动人类生命意义的根本跃迁<br><small style="font-size:12px;opacity:0.7;">To bring to an end the history of 'people working merely to survive,' and to begin a new era in which 'people innovate for their dreams.'</small></div>
 </section>
 
 <div class="divider"></div>
 
+<!-- 04 价值观 -->
 <section id="values">
-<h2 data-i18n="values_title">价值观 VALUES - 八大不可动摇基石</h2>
+<h2>价值观 VALUES - 八大不可动摇基石</h2>
+<div class="sub">EIGHT UNSHAKABLE FOUNDATIONS · CORE VALUES</div>
 <img class="img-center" src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR%E5%85%AB%E5%A4%A7%E6%9C%AA%E6%9D%A5%E6%96%87%E6%98%8E%E5%9F%BA%E7%9F%B3.png" alt="values">
 <div class="card-grid">
 <div class="card">01 放下历史面向未来<br><small>Let Go of the Past, Face the Future - 让历史成为参考而非枷锁</small></div>
@@ -108,53 +166,95 @@ footer{text-align:center;padding:60px 20px;color:var(--dim);font-size:12px;borde
 
 <div class="divider"></div>
 
+<!-- 05 治理 -->
 <section id="governance">
-<h2 data-i18n="gov_title">治理 GOVERNANCE - AI辅助自治</h2>
-<div class="sub">CODE IS CONSTITUTION · AI AS PUBLIC SERVANT</div>
-<p class="text-block center" data-i18n="gov_flow">人类提案 Human Proposal → AI审议 AI Review（偏见检测/合规检查/风险评估） → 社区投票 Community Vote（二次方投票） → 链上自动执行 On-Chain Execution</p>
-<div class="card-grid">
-<div class="card">代码即宪法 Code is Constitution</div>
-<div class="card">AI为公仆 AI as Public Servant, not Ruler</div>
-<div class="card">透明可审计 Transparent & Auditable</div>
-<div class="card">反特权黑箱 Anti-Privilege Black Box</div>
-</div>
+<h2>治理 GOVERNANCE - AI辅助自治</h2>
+<div class="sub">CODE IS CONSTITUTION · AI AS PUBLIC SERVANT · ANTI-BLACK BOX</div>
+<div class="flow"><div class="step">人类提案<br>Human Proposal</div><div style="color:var(--gold)">→</div><div class="step">AI审议<br>AI Review<br><small>偏见检测/合规/风险</small></div><div style="color:var(--gold)">→</div><div class="step">社区投票<br>Community Vote<br><small>二次方投票</small></div><div style="color:var(--gold)">→</div><div class="step">链上自动执行<br>On-Chain Execution</div></div>
+<div class="card-grid"><div class="card"><b>代码即宪法</b><br>Code is Constitution - 任何规则都在链上公开</div><div class="card"><b>AI为公仆</b><br>AI as Public Servant, not Ruler - AI审议，人类决策</div><div class="card"><b>透明可审计</b><br>Transparent & Auditable - 所有治理过程可追溯</div><div class="card"><b>反特权黑箱</b><br>Anti-Privilege Black Box - 没有秘密会议，只有公开投票</div></div>
 </section>
 
 <div class="divider"></div>
 
+<!-- 06 开放实验 -->
 <section id="experiment">
-<h2 data-i18n="exp_title">开放实验 OPEN EXPERIMENT</h2>
-<img class="img-center" src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR%E5%BC%80%E6%94%BE%E5%AE%9E%E9%AA%8C%E4%B8%8E%E5%8A%A0%E5%85%A5.png" alt="exp">
-<p class="text-block center" data-i18n="exp_text">这不是一家公司，这是一场关于人类未来的开放实验。DAADR是一个开放实验，任何人都可以 Fork本仓库，提交你的改进，提交Proposal，参与治理投票，用代码、用设计、用布道加入我们。This is an open experiment for humanity. Everyone can fork, propose, and build.</p>
+<h2>开放实验 OPEN EXPERIMENT</h2>
+<div class="sub">NOT A COMPANY, AN OPEN EXPERIMENT FOR HUMANITY</div>
+<img class="img-center" src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR%E5%BC%80%E6%94%BE%E5%AE%9E%E9%AA%8C%E4%B8%8E%E5%8A%A0%E5%85%A5.png" alt="experiment">
+<p class="text-block center">这不是一家公司，这是一场关于人类未来的开放实验。DAADR是一个开放实验，任何人都可以 Fork本仓库，提交你的改进，提交Proposal，参与治理投票，用代码、用设计、用布道加入我们。<br><br>This is an open experiment for humanity. Everyone can fork, propose, and build.<br><br>无论你身在何处，只要你厌倦了传统政治的自私自利、尔虞我诈、独裁、专制、特权；只要你相信生命是为了创造而不仅仅是生存，DAADR就是你的精神祖国。</p>
 </section>
 
 <div class="divider"></div>
 
-<section id="join">
-<h2>加入我们 / 募捐</h2>
-<div class="card-grid">
-<div class="card">
-<h3 data-i18n="join_title">招募创世团队 100 First Citizens</h3>
-<p>Core Dev / Cryptographer / Economist / Evangelist / Designer / Governance Researcher</p>
-<p>回报：Genesis NFT + 治理权 + UBI白名单</p>
-<p>X: <a href="https://x.com/ZUIucgQImBFYaf2" style="color:var(--gold)">@ZUIucgQImBFYaf2</a><br>邮箱: xnxinx@gmail.com<br><a href="mailto:xnxinx@gmail.com?subject=申请加入DAADR创世团队" class="btn btn-gold" style="margin-top:8px;">申请加入</a></p>
+<!-- 07 加入我们 -->
+<section id="recruit" class="recruit-section">
+<div class="recruit-label">06 / 招募 RECRUITMENT · 100 FIRST CITIZENS</div>
+<div class="recruit-title">招募创世团队 <span style="color:var(--gold)">JOIN GENESIS TEAM</span></div>
+<div class="recruit-sub">100 First Citizens · 首批100位公民 · Genesis NFT · 治理权 · UBI白名单</div>
+<div class="recruit-box"><div class="recruit-text" style="font-size:13px;line-height:1.9;">无论你身在何处，无论你属于哪个种族；只要你厌倦了传统政治和政党的自私自利、尔虞我诈、独裁、专制、特权；只要你相信你的生命是为了创造而不仅仅是生存；只要你渴望在一个没有独裁、没有特权、没有阶级固化的世界里，自由地追逐那些看似疯狂的梦想。DAADR 就是你的精神祖国。</div></div>
+<div class="roles-grid">
+<div class="role-card"><h4>Core Dev</h4><div class="duty">职责: 协议 / 合约 / 去中心化架构</div><div class="benefit">权益: Genesis NFT + 治理权 + UBI白名单</div></div>
+<div class="role-card"><h4>Cryptographer</h4><div class="duty">职责: 零知识 / 多签 / 隐私治理</div><div class="benefit">权益: Genesis NFT + 治理权 + UBI白名单</div></div>
+<div class="role-card"><h4>Economist</h4><div class="duty">职责: UBI模型 / Tokenomics / 分配正义</div><div class="benefit">权益: Genesis NFT + 治理权 + UBI白名单</div></div>
+<div class="role-card"><h4>Evangelist</h4><div class="duty">职责: 社区共识 / 翻译 / 教育布道</div><div class="benefit">权益: Genesis NFT + 治理权 + UBI白名单</div></div>
+<div class="role-card"><h4>Designer</h4><div class="duty">职责: 视觉美学 / 户产设计 / 仪式系统</div><div class="benefit">权益: Genesis NFT + 治理权 + UBI白名单</div></div>
+<div class="role-card"><h4>Governance Researcher</h4><div class="duty">职责: AI计刑 /宪法选代 /制衡设计</div><div class="benefit">权益: Genesis NFT + 治理权 + UBI白名单</div></div>
 </div>
-<div class="card">
-<h3>募捐与国库 Donation & Treasury</h3>
-<div class="wallet"><span id="wallet">0x1f21af78d09113fe5626b6128c3ab9cc27adc228</span><button onclick="copyWallet()">复制</button></div>
-<p>40% UBI池 / 30% 开发 / 20% 安全审计 / 10% 社区 · 多签钱包 · 每月链上报告 · AI审计</p>
-<img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/%E5%88%9B%E4%B8%96.jpg" style="width:110px;border-radius:8px;margin-top:10px;" alt="qr">
-</div>
+<div class="contact-box">
+<div class="left"><div>CONTACT · 创世团队联系 · 官文对接</div><div>X / 推特: <a href="https://x.com/ZUIucgQImBFYaf2">@ZUIucgQImBFYaf2</a></div><div>Email: <a href="mailto:xnxinx@gmail.com">xnxinx@gmail.com</a></div><div>GitHub: xnxin69-collab/DAADR-Official</div></div>
+<div><button class="apply-btn" onclick="location.href='mailto:xnxinx@gmail.com?subject=申请加入DAADR创世团队'">申请加入 → 发送邮件</button><div style="font-size:9px;color:var(--dim);margin-top:6px;">主题: 申请加入DAADR创世团队<br>正文: GitHub + 你为什么相信去中心化能守护自由<br>40h内 PDF 回复确认</div></div>
 </div>
 </section>
 
-<footer>GENESIS YEAR ONE 2025 | A better world is possible<br>X @ZUIucgQImBFYaf2 | xnxinx@gmail.com | 0x1f21af78d09113fe5626b6128c3ab9cc27adc228<br>DAADR-Official | DAADR-2.0 | DAADR-AI-GM-</footer>
+<div class="divider"></div>
+
+<!-- 08 募捐 -->
+<section id="donation">
+<h2>募捐与国库 DONATION & TREASURY</h2>
+<div class="sub">EVERY CENT FLOWS TRANSPARENTLY ON-CHAIN · 多签钱包 · 每月链上报告 · AI审计</div>
+<div class="card-grid">
+<div class="card"><h3>国库地址 Treasury Address (ETH/BSC/Polygon ERC20 通用)</h3><div class="wallet"><span id="wallet">0x1f21af78d09113fe5626b6128c3ab9cc27adc228</span><button onclick="copyW()">复制</button></div><p>40% UBI池 / 30% 开发 / 20% 安全审计 / 10% 社区<br>多签钱包 Gnosis Safe · 每月链上报告 · AI审计<br>大额捐助请联系 Email / X</p></div>
+<div class="card"><h3>透明承诺 Transparency</h3><p>每一分钱都在链上透明流动<br>ETH Mainnet / BSC / Polygon ERC20 通用<br>大额捐助请联系 Email / X</p><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/%E5%88%9B%E4%B8%96.jpg" style="width:90px;border-radius:8px;margin-top:8px;" alt="qr"><p style="font-size:10px;color:var(--dim);margin-top:8px;">二维码占位 - 钱包地址扫码</p></div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 09 白皮书 -->
+<section id="whitepaper" class="whitepaper-section">
+<div class="wp-label"><span>08 / 白皮书</span><span>WHITEPAPER & OFFICIAL DOCS</span></div>
+<div class="wp-title">官文与白皮书 <span style="color:var(--gold)">OFFICIAL DOCS —</span></div>
+<div class="wp-sub">所有文档链上备份 / 链上哈希存证 / 公开可验证 · 所有文档 Raw 直链，公开可验证</div>
+<div class="doc-cards">
+<div class="doc-card"><div class="icon">📄</div><div class="path">./image(2).jpg</div><h4>DAADR-独立宣言与创世书</h4><div class="desc">创世宪法正文 · 中英文<br>Genesis Constitution · Bilingual</div><a class="open-btn" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank">打开文档 ↗</a></div>
+<div class="doc-card"><div class="icon">✦</div><div class="path">./image(3).jpg</div><h4>我有一个愿景</h4><div class="desc">Vision · 愿景原稿<br>I Have a Dream · 原文</div><a class="open-btn" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E6%84%BF%E6%99%AF.docx" target="_blank">打开文档 ↗</a></div>
+<div class="doc-card"><div class="icon">●</div><div class="path">./image(4).jpg</div><h4>完整中英文对照版</h4><div class="desc">完整对照版 · Bilingual Full<br>Declaration & Genesis Full</div><a class="open-btn" href="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6%E5%AE%8C%E6%95%B4%E4%B8%AD%E8%8B%B1%E6%96%87%E5%AF%B9%E7%85%A7%E7%89%88.docx" target="_blank">打开文档 ↗</a></div>
+</div>
+<div class="links-box">
+<div class="box-label"><span>OFFICIAL LINKS · 官文链接</span><span>THUMBNAILS PREVIEW</span></div>
+<div class="link-item">/DAADR-独立宣言与创世书.pdf → 创世书 PDF (Raw直链)</div>
+<div class="link-item">/我有一个愿景.docx → 愿景 DOCX (Raw直链)</div>
+<div class="link-item">/DAADR-独立宣言与创世书完整中英文对照版.docx → 完整对照版 (Raw直链)</div>
+<div class="link-item">GitHub: xnxin69-collab/DAADR-Official - Current genesis repo</div>
+<div class="link-item">GitHub: DAADR-2.0 - 历史存档 Classic solemn version</div>
+<div class="link-item">GitHub: DAADR-AI-GM- - AI治理模块 AI Governance Module</div>
+<div style="margin-top:12px;display:flex;gap:8px;"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%282%29.jpg" style="width:60px;height:80px;object-fit:cover;border-radius:6px;opacity:0.6;"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%283%29.jpg" style="width:60px;height:80px;object-fit:cover;border-radius:6px;opacity:0.6;"><img src="https://raw.githubusercontent.com/xnxin69-collab/DAADR-Official/TEST-INDEX%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2/image%284%29.jpg" style="width:60px;height:80px;object-fit:cover;border-radius:6px;opacity:0.6;"></div>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-card"><b>DAADR-Official GENESIS YEAR ONE 2025</b><br><small>X @ZUIucgQImBFYaf2 · xnxinx@gmail.com<br>0x1f21af78d09113fe5626b6128c3ab9cc27adc228</small></div>
+<div class="footer-card"><b>RELATED REPOS</b><br><small>→ DAADR-2.0 - Classic solemn version<br>→ DAADR-AI-GM- - AI Governance Module<br>→ DAADR-Official - Current genesis repo</small><br><br><span style="background:rgba(200,169,106,0.1);border:1px solid var(--gold-dim);padding:6px 12px;border-radius:20px;font-size:11px;">● A better world is possible.</span></div>
+</div>
+<div style="font-size:10px;opacity:0.4;letter-spacing:0.15em;">DAADR-2.0 CLEAN CLASSIC · DARK #080B14 · GOLD #C8A96A · 9 MODULES · SOLEMN CONSTITUTION STYLE · BUILT FOR GITHUB PAGES</div>
+</footer>
 </main>
 <script>
-const i18n={zh:{nav_mission:"使命",nav_vision:"愿景",nav_values:"基石",nav_gov:"治理",nav_join:"加入",hero_title:"去中心化AI自治自由民主共和国（试验区）",slogan:"用去中心化守护自由 让AI服务于人 让科技红利惠及每一个人",about:"尝试用去中心化的AI辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，并通过UBI终结人为了生存而工作的历史，开启人为梦想而创新的新纪元",btn_pdf:"宣言 PDF →",btn_vision:"查看愿景 DOCX ↗",btn_full:"完整对照版 DOCX",mission_title:"使命 MISSION",m1:"我们决定在精神上与旧世界的腐朽规则决裂。我们不再寻求修补那台已经锈迹斑斑的机器，我们选择重写人类文明的操作系统（OS-Level Rebuild）。",m2:"用去中心化的AI辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，并彻底消灭独裁、专制、特权的土壤。",vision_title:"愿景 VISION - 我有一个愿景",v1:"在我的愿景中，每一个国家和民族都能够卸下历史的包袱，不再为过去的仇怨所牵绊。我们将超越国界，抛却偏见，携手向前。我们会建立一个能够容纳每一个人梦想的世界，一个真正属于全人类的文明。",v2:"在这个愿景中，每个人都享有真正平等的权利和自由。没有人会因为肤色、性别、宗教或财富而被区别对待；每个人的声音都会被倾听，每个人的权利都将被维护。",v3:"在这个愿景中，我们将共同创建一个去中心化的民主自治共和国。这里没有独裁和专制，没有人能垄断权力。所有的权力属于人民。",v4:"在这个愿景中，技术进步和自动化带来的不是失业和恐慌，而是每一个人都能够享有的福祉。我们将建立全民基本收入（UBI）制度，确保每一个公民都不再为基本生计而担忧。",v_quote:"彻底终结“人为了生存而工作”的历史，开启“人为了梦想而创新”的新纪元。——不仅仅是消除贫困，更要推动人类生命意义的根本跃迁",values_title:"价值观 VALUES - 八大不可动摇基石",gov_title:"治理 GOVERNANCE - AI辅助自治",gov_flow:"人类提案 → AI审议 → 社区投票 → 链上自动执行",exp_title:"开放实验 OPEN EXPERIMENT",exp_text:"这不是一家公司，这是一场关于人类未来的开放实验。任何人都可以Fork、提交改进、参与治理投票。",join_title:"招募创世团队 100 First Citizens"},en:{nav_mission:"Mission",nav_vision:"Vision",nav_values:"Values",nav_gov:"Governance",nav_join:"Join",hero_title:"Decentralized AI Autonomous Democratic Republic (Pilot Zone)",slogan:"Use decentralization to protect freedom, let AI serve humanity, and ensure benefits reach everyone",about:"Attempt to rebuild a world without dictatorship, corruption, privilege and fear through decentralized AI-assisted self-governance, end the era of working to survive via UBI, and begin era of innovating for dreams",btn_pdf:"Declaration PDF →",btn_vision:"Vision DOCX ↗",btn_full:"Full Bilingual DOCX",mission_title:"MISSION",m1:"We choose, in spirit, to break with the decaying rules of the old world. We no longer seek to repair a machine already covered in rust. We choose instead to rewrite the operating system of human civilization.",m2:"Through decentralized AI-assisted self-governance, rebuild a world without dictatorship, corruption, privilege, or fear",vision_title:"VISION - I Have a Dream",v1:"In my vision, every nation can let go of historical burdens, transcend borders and prejudices, and move forward together to build a world that holds everyone's dreams.",v2:"In this vision, everyone enjoys truly equal rights and freedom. No one is discriminated by color, gender, religion or wealth. Every voice is heard.",v3:"In this vision, we will create a decentralized democratic autonomous republic. There is no dictatorship. All power belongs to the people.",v4:"In this vision, technological progress brings not unemployment and panic, but welfare for all. We will establish UBI to ensure no citizen worries about basic livelihood.",v_quote:"End the history of working merely to survive, begin era of innovating for dreams — Not merely eliminate poverty, but transform meaning of human life",values_title:"VALUES - 8 Unshakable Foundations",gov_title:"GOVERNANCE - AI-Assisted",gov_flow:"Proposal → AI Review → Vote → On-Chain Execution",exp_title:"OPEN EXPERIMENT",exp_text:"This is not a company, this is an open experiment for humanity. Everyone can fork, propose, and build.",join_title:"Join Genesis Team - 100 First Citizens"}};
-function setLang(l){localStorage.setItem('daadr_lang',l);document.documentElement.lang=l;document.getElementById('btn-zh').classList.toggle('active',l==='zh');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(i18n[l][k])el.textContent=i18n[l][k];});}
-function copyWallet(){navigator.clipboard.writeText(document.getElementById('wallet').textContent);alert('已复制');}
+function setLang(l){localStorage.setItem('daadr_lang',l);document.getElementById('btn-zh').classList.toggle('active',l==='zh');document.getElementById('btn-en').classList.toggle('active',l==='en');}
+function copyW(){navigator.clipboard.writeText(document.getElementById('wallet').textContent);alert('已复制钱包地址');}
 setLang(localStorage.getItem('daadr_lang')||'zh');
+document.querySelectorAll('nav a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});});});
 </script>
 </body>
 </html>
