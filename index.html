@@ -1,80 +1,149 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080b14">
-<meta name="description" content="DAADR — 以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的。开放的AI辅助去中心化治理实验。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050b16">
+<meta name="description" content="DAADR — 去中心化AI自治自由民主共和国（试验区）。以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的。">
 <title>DAADR｜去中心化AI自治自由民主共和国（试验区）</title>
-<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="topline"></div>
-<header class="header">
- <a class="brand" href="#home" aria-label="DAADR 首页"><span class="brand-mark">D<span>✦</span></span><span class="brand-name">DAADR <small>OPEN CIVIC EXPERIMENT</small></span></a>
- <button class="menu-btn" id="menuBtn" aria-label="打开导航" aria-expanded="false">☰</button>
- <nav class="nav" id="nav">
-  <a href="#mission" data-i18n="navMission">使命愿景</a><a href="#foundations" data-i18n="navValues">八大基石</a><a href="#governance" data-i18n="navGovernance">治理实验</a><a href="#roadmap" data-i18n="navRoadmap">发展路线</a><a href="#join" data-i18n="navJoin">创世团队招募</a><a href="#support" data-i18n="navSupport">支持我们</a>
-  <button class="lang-btn" id="langBtn" aria-label="切换语言">EN</button>
-  <a class="nav-github" href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener">GitHub ↗</a>
- </nav>
+<div class="stars"></div>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="DAADR Home">
+    <img src="assets/logo-mark.svg" alt="DAADR emblem">
+    <span class="brand-copy"><strong>DAADR</strong><small>Decentralized AI Autonomous<br>Democratic Republic</small></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="mainNav">
+    <a class="nav-link active" href="#home"><span data-zh="首页" data-en="Home">首页</span><small>Home</small></a>
+    <a class="nav-link" href="#mission"><span data-zh="使命与愿景" data-en="Mission & Vision">使命与愿景</span><small>Mission & Vision</small></a>
+    <a class="nav-link" href="#foundations"><span data-zh="八大基石" data-en="Core Principles">八大基石</span><small>Core Principles</small></a>
+    <a class="nav-link" href="#governance"><span data-zh="治理实验" data-en="Governance">治理实验</span><small>Governance</small></a>
+    <a class="nav-link" href="#join"><span data-zh="创世团队" data-en="Join Us">创世团队</span><small>Join Us</small></a>
+    <a class="nav-link" href="#support"><span data-zh="支持我们" data-en="Support">支持我们</span><small>Support</small></a>
+  </nav>
+  <div class="header-actions">
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">◎ <b>中 / EN</b></button>
+    <a class="github-btn" href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener">◉ <span>GitHub</span></a>
+  </div>
 </header>
+
 <main>
 <section class="hero" id="home">
- <div class="hero-grid"></div><div class="hero-content">
-  <div class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">面向 AI 时代的开放治理实验</span></div>
-  <div class="hero-kicker">DECENTRALIZED · HUMAN-CENTRED · OPEN</div>
-  <h1><span data-i18n="heroTitleA">让技术服务于自由</span><br><em data-i18n="heroTitleB">让权力回归公民</em></h1>
-  <p class="hero-sub" data-i18n="heroSub">去中心化AI自治自由民主共和国（试验区）</p>
-  <p class="hero-desc" data-i18n="heroDesc">探索一种面向 AI 时代的公共治理方式：以去中心化架构限制权力集中，以公开规则和可审计流程建立信任，以 AI 辅助人类协作与决策。</p>
-  <div class="hero-actions"><a class="btn btn-gold" href="#mission" data-i18n="explore">了解 DAADR <span>↗</span></a><a class="btn btn-outline" href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener" data-i18n="viewGithub">查看开源仓库</a></div>
-  <div class="hero-note" data-i18n="heroNote">这是一个持续建设中的理念与开源实验项目，不代表已经建立现实国家或政府。</div>
- </div>
- <div class="hero-art" aria-hidden="true"><img src="./assets/hero-gold-civilization.webp" alt="" loading="eager"><div class="hero-art-caption">HUMAN SOVEREIGNTY · OPEN CIVILIZATION</div></div>
- <div class="hero-bottom"><span>01 / A NEW CIVIC EXPERIMENT</span><span>SCROLL TO EXPLORE ↓</span></div>
+  <div class="hero-art" aria-hidden="true"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span></span><span data-zh="面向 AI 时代的开放治理实验" data-en="An open governance experiment for the AI era">面向 AI 时代的开放治理实验</span></div>
+    <h1>DAADR</h1>
+    <h2 data-zh="去中心化AI自治自由民主共和国" data-en="Decentralized AI Autonomous Democratic Republic">去中心化AI自治自由民主共和国</h2>
+    <p class="english-title">Decentralized AI Autonomous Democratic Republic</p>
+    <div class="hero-line"></div>
+    <p class="slogan" data-zh="以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的" data-en="Decentralized governance as our foundation. Code as our constitution. AI as our servant. Freedom as our ultimate purpose.">以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的</p>
+    <p class="hero-sub" data-zh="以去中心化治理，构建更自由、更公平、更透明的未来" data-en="Building a freer, fairer and more transparent future through decentralized governance">以去中心化治理，构建更自由、更公平、更透明的未来</p>
+    <a class="gold-button" href="#mission"><span data-zh="探索 DAADR" data-en="Explore DAADR">探索 DAADR</span><b>→</b></a>
+  </div>
+  <div class="hero-caption"><span>HUMAN SOVEREIGNTY</span><i></i><span>OPEN · FAIR · TRANSPARENT</span></div>
 </section>
-<section class="manifesto section" id="mission"><div class="section-head"><div><div class="eyebrow">01 — PURPOSE & VISION</div><h2 data-i18n="missionTitle">使命与愿景</h2></div><p data-i18n="missionLead">不是让 AI 统治人类，而是让 AI 帮助人类更好地自治。</p></div>
- <div class="mission-grid"><article class="feature-card"><div class="feature-index">MISSION / 使命</div><div class="big-symbol">⌁</div><h3 data-i18n="missionH">以去中心化治理为根基</h3><p data-i18n="missionP">探索开放、透明、可验证的公共协作机制，让规则可被理解、权力可被约束、决策可被追溯，让每一位参与者拥有平等表达与参与的机会。</p></article>
- <article class="feature-card feature-highlight"><div class="feature-index">VISION / 愿景</div><div class="big-symbol">✧</div><h3 data-i18n="visionH">以自由与人的尊严为终极目的</h3><p data-i18n="visionP">探索如何把技术进步转化为更广泛的公共福祉，让人们有更多空间追求创造、学习、家庭与梦想，而不是被基本生存压力所束缚。</p></article></div>
- <blockquote class="slogan"><span>“</span><div data-i18n="slogan">以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的</div></blockquote>
+
+<section class="quick-cards" aria-label="DAADR sections">
+  <a class="quick-card" href="#mission">
+    <span class="card-icon">✧</span><h3 data-zh="我们的愿景" data-en="Our Vision">我们的愿景</h3><small>Our Vision</small>
+    <p data-zh="一个自由、平等、共同繁荣的数字文明社会" data-en="A free, equal and flourishing digital civilization">一个自由、平等、共同繁荣的数字文明社会</p><b class="card-link">Read More →</b>
+  </a>
+  <a class="quick-card" href="#foundations">
+    <span class="card-icon">◇</span><h3 data-zh="八大基石" data-en="Eight Foundations">八大基石</h3><small>Core Principles</small>
+    <p data-zh="自由、平等、透明、共享……构建可持续的制度基石" data-en="Freedom, equality, transparency and shared prosperity">自由、平等、透明、共享……构建可持续的制度基石</p><b class="card-link">Read More →</b>
+  </a>
+  <a class="quick-card" href="#governance">
+    <span class="card-icon">♜</span><h3 data-zh="治理实验" data-en="Governance">治理实验</h3><small>Governance</small>
+    <p data-zh="去中心化治理，让每个人都有发声权" data-en="Decentralized governance where every voice can be heard">去中心化治理，让每个人都有发声权</p><b class="card-link">Read More →</b>
+  </a>
+  <a class="quick-card featured" href="#join">
+    <span class="card-icon">♧</span><h3 data-zh="招募加入" data-en="Join Us">招募加入</h3><small>Join Us</small>
+    <p data-zh="与全球伙伴一起，共建 DAADR 未来" data-en="Build the DAADR future with collaborators worldwide">与全球伙伴一起，共建 DAADR 未来</p><b class="card-cta" data-zh="立即加入 →" data-en="Join the team →">立即加入 →</b>
+  </a>
+  <a class="quick-card" href="#support">
+    <span class="card-icon">♡</span><h3 data-zh="支持我们" data-en="Support">支持我们</h3><small>Support</small>
+    <p data-zh="支持创新，推动变革，共建人类美好未来" data-en="Support innovation and help shape a better future">支持创新，推动变革，共建人类美好未来</p><b class="card-cta" data-zh="了解支持方式 →" data-en="Ways to support →">了解支持方式 →</b>
+  </a>
 </section>
-<section class="foundations section" id="foundations"><div class="section-head"><div><div class="eyebrow">02 — THE FOUNDING COVENANT</div><h2 data-i18n="valuesTitle">新世界的立国契约</h2></div><p data-i18n="valuesLead">八大不可动摇的立国基石 · 核心价值观</p></div><div class="values-grid" id="valuesGrid">
- <article class="value-card"><span>01</span><div><h3 data-i18n="v1t">放下历史，面向未来</h3><p data-i18n="v1p">让历史成为参考而非枷锁，消除种族与历史仇恨，在全球共识中避免对抗。</p></div></article>
- <article class="value-card"><span>02</span><div><h3 data-i18n="v2t">走出传统文化，拥抱现代文明</h3><p data-i18n="v2p">我们基于民主、自由、平等、人权等普世价值建立数字契约，破除封建僵化。以AI驱动的教育系统，塑造具有全球视野、拥抱现代文明的公民。</p></div></article>
- <article class="value-card"><span>03</span><div><h3 data-i18n="v3t">自由与民主 —— 杜绝专制</h3><p data-i18n="v3p">彻底杜绝任何个人、组织或中心化权力凌驾于公民自由之上。任何形式的独裁、专制、特权和暴政都将被代码所禁止。</p></div></article>
- <article class="value-card"><span>04</span><div><h3 data-i18n="v4t">平等与包容 —— 拒绝特权</h3><p data-i18n="v4p">无论性别、信仰、种族或背景，公民都享有平等的权利与机会。任何形式的特权阶层将被拒绝。</p></div></article>
- <article class="value-card"><span>05</span><div><h3 data-i18n="v5t">透明与公正 —— 防止暴政</h3><p data-i18n="v5p">治理过程全面公开透明、可审计与可追溯，区块链可追溯配合AI公正，暴政依赖黑箱与谎言，我们依靠透明与验证。在这里，没有秘密的统治，只有公开的治理，让暴政在阳光下无处藏身。</p></div></article>
- <article class="value-card"><span>06</span><div><h3 data-i18n="v6t">去中心化AI辅助自治 —— 消解独裁根源</h3><p data-i18n="v6p">用去中心化斩断权力垄断，我们以去中心化架构与区块链共享平台为基础，打破中心化权力垄断，确保民主自治、分权制衡，这是DAADR的根本解药。</p></div></article>
- <article class="value-card"><span>07</span><div><h3 data-i18n="v7t">全民基本收入（UBI）制度 —— 消除依附关系</h3><p data-i18n="v7p">在AI自动化时代，我们通过Token Staking与AI分配，将机器创造的财富无条件返还给每一位公民，保障公民基本生活，彻底摆脱对统治阶层的依赖。这里没有统治者的施舍，只有公民应有的权利。让我们真正从“为生计而拼搏”转变为“为创新和梦想而奋斗”。</p></div></article>
- <article class="value-card"><span>08</span><div><h3 data-i18n="v8t">持续创新 —— 抵御制度僵化</h3><p data-i18n="v8p">我们的制度是活的，它将以人类福祉为核心，在共识驱动下不断自我迭代，永不僵化，永不滑向腐败。僵化的制度最容易滑向专制暴政，我们以AI驱动制度进化，保证自由与公平永不退步。</p></div></article>
- </div><p class="values-foot" data-i18n="valuesFoot">以上为 DAADR 的价值原则与建设方向。具体制度须经公开讨论、法律审查、试点验证和持续修订。</p></section>
-<section class="governance section" id="governance"><div class="section-head"><div><div class="eyebrow">03 — GOVERNANCE LAB</div><h2 data-i18n="govTitle">把理念变成可检验的流程</h2></div><p data-i18n="govLead">先从小规模、可审计、可退出的公共议题实验开始。</p></div>
- <div class="flow"><div class="flow-step"><b>01</b><strong data-i18n="step1">提出议题</strong><small data-i18n="step1s">公开提案与依据</small></div><i>→</i><div class="flow-step"><b>02</b><strong data-i18n="step2">AI 辅助分析</strong><small data-i18n="step2s">整理资料与影响</small></div><i>→</i><div class="flow-step"><b>03</b><strong data-i18n="step3">公民讨论</strong><small data-i18n="step3s">质询、修订与回应</small></div><i>→</i><div class="flow-step"><b>04</b><strong data-i18n="step4">人类表决</strong><small data-i18n="step4s">规则明确、结果可查</small></div><i>→</i><div class="flow-step"><b>05</b><strong data-i18n="step5">执行与审计</strong><small data-i18n="step5s">公开记录与申诉</small></div></div>
- <div class="governance-bottom"><div class="gov-copy"><div class="eyebrow">HUMAN IN THE LOOP</div><h3 data-i18n="humanTitle">AI 是公仆，不是主权者</h3><p data-i18n="humanP">AI 可以协助检索信息、归纳观点、模拟政策影响和检查流程，但不能拥有不受约束的最终权力。重要决定必须保留人类监督、解释、申诉和纠错机制。</p><ul><li data-i18n="guard1">公开算法用途与适用边界</li><li data-i18n="guard2">利益冲突披露与独立审计</li><li data-i18n="guard3">少数意见保护与申诉渠道</li><li data-i18n="guard4">定期复核、修订与退出机制</li></ul></div>
- <div class="demo-card"><div class="demo-label"><span class="live-dot"></span><span data-i18n="demoLabel">交互演示 · 非真实投票</span></div><h3 data-i18n="demoTitle">示例提案：是否公开发布每月项目进展报告？</h3><p data-i18n="demoDesc">请选择一个选项，体验投票界面。你的选择仅在当前浏览器页面显示，不会发送到服务器，也不构成真实治理结果。</p><div class="vote-options"><button data-vote="yes" data-i18n="voteYes">赞成</button><button data-vote="no" data-i18n="voteNo">反对</button><button data-vote="abstain" data-i18n="voteAbstain">弃权</button></div><div class="vote-result" id="voteResult" aria-live="polite" data-i18n="voteEmpty">等待你的选择</div><div class="demo-disclaimer" data-i18n="demoDisclaimer">本演示不记录身份、不统计真实票数、不连接区块链。</div></div></div>
+
+<section class="section mission-section" id="mission">
+  <div class="section-kicker">01 / MISSION & VISION</div>
+  <div class="section-heading"><div><h2 data-zh="一个值得共同创造的未来" data-en="A future worth building together">一个值得共同创造的未来</h2><p data-zh="技术应当服务于人，制度应当保护自由。" data-en="Technology should serve people. Institutions should protect freedom.">技术应当服务于人，制度应当保护自由。</p></div><span class="section-mark">DAADR</span></div>
+  <div class="mission-grid">
+    <article class="mission-panel"><span class="panel-symbol">◎</span><h3 data-zh="我们的使命" data-en="Our Mission">我们的使命</h3><p data-zh="探索以去中心化治理和 AI 辅助协作，建立开放、透明、可审计、以人为本的自治机制，让公民能够平等参与公共事务。" data-en="To explore open, transparent, auditable and human-centred self-governance through decentralized systems and AI-assisted collaboration, enabling people to participate equally in public affairs.">探索以去中心化治理和 AI 辅助协作，建立开放、透明、可审计、以人为本的自治机制，让公民能够平等参与公共事务。</p></article>
+    <article class="mission-panel"><span class="panel-symbol">✧</span><h3 data-zh="我们的愿景" data-en="Our Vision">我们的愿景</h3><p data-zh="迈向一个自由、平等、包容、共享的数字文明社会。让技术进步扩大人的选择，让制度创新守护人的尊严，让创新与梦想不再被生存焦虑所限制。" data-en="A free, equal, inclusive and collaborative digital civilization—where technology expands human choice, institutions protect dignity, and innovation is not constrained by the struggle for subsistence.">迈向一个自由、平等、包容、共享的数字文明社会。让技术进步扩大人的选择，让制度创新守护人的尊严，让创新与梦想不再被生存焦虑所限制。</p></article>
+  </div>
 </section>
-<section class="roadmap section" id="roadmap"><div class="section-head"><div><div class="eyebrow">04 — ROADMAP</div><h2 data-i18n="roadTitle">从共识到实践，循序推进</h2></div><p data-i18n="roadLead">以可验证的阶段成果建立信任，不以宏大承诺替代实际进展。</p></div>
- <div class="road-list"><article><span>PHASE 01</span><div><h3 data-i18n="r1t">公开理念与建立共识</h3><p data-i18n="r1p">完善宣言、创世书、网站和开源资料；邀请研究者、开发者与公众提出批评和建议。</p></div><em data-i18n="statusNow">当前重点</em></article><article><span>PHASE 02</span><div><h3 data-i18n="r2t">组建跨领域创世团队</h3><p data-i18n="r2p">建立透明的协作规则，明确技术、法律、经济、治理研究、设计与传播等职责。</p></div><em data-i18n="statusPlan">规划阶段</em></article><article><span>PHASE 03</span><div><h3 data-i18n="r3t">开发最小可行治理原型</h3><p data-i18n="r3p">围绕提案、讨论、投票、执行记录和审计，构建可测试、可复核的在线原型。</p></div><em data-i18n="statusPlan">规划阶段</em></article><article><span>PHASE 04</span><div><h3 data-i18n="r4t">开展有限范围试点</h3><p data-i18n="r4p">在自愿参与、法律合规、风险可控的环境中开展小规模实验，公开评估结果。</p></div><em data-i18n="statusResearch">研究与论证</em></article><article><span>PHASE 05</span><div><h3 data-i18n="r5t">研究 UBI 与长期制度设计</h3><p data-i18n="r5p">开展经济模型、资金来源、分配规则、隐私保护和监管条件研究，不预先承诺收益或福利。</p></div><em data-i18n="statusResearch">研究与论证</em></article></div>
+
+<section class="section foundations-section" id="foundations">
+  <div class="section-kicker">02 / THE FOUNDING COVENANT</div>
+  <div class="section-heading"><div><h2 data-zh="新世界的立国契约" data-en="The Founding Covenant">新世界的立国契约</h2><p data-zh="八大不可动摇的立国基石（核心价值观）" data-en="Eight Unshakable Foundations (Core Values)">八大不可动摇的立国基石（核心价值观）</p></div></div>
+  <div class="foundation-grid">
+    <article class="foundation"><span>01</span><h3 data-zh="放下历史，面向未来" data-en="Let Go of the Past, Face the Future">放下历史，面向未来</h3><p data-zh="让历史成为参考而非枷锁，消除种族与历史仇恨，在全球共识中避免对抗。" data-en="Let history serve as a reference rather than a chain. Reject racial and historical hatred and reduce confrontation through global consensus.">让历史成为参考而非枷锁，消除种族与历史仇恨，在全球共识中避免对抗。</p></article>
+    <article class="foundation"><span>02</span><h3 data-zh="走出传统文化，拥抱现代文明" data-en="Move Beyond Tradition, Embrace Modern Civilization">走出传统文化，拥抱现代文明</h3><p data-zh="基于民主、自由、平等、人权等普世价值建立数字契约，以 AI 驱动教育培养全球视野。" data-en="Build a digital covenant on democracy, freedom, equality and human rights; use AI-assisted education to foster a global outlook.">基于民主、自由、平等、人权等普世价值建立数字契约，以 AI 驱动教育培养全球视野。</p></article>
+    <article class="foundation"><span>03</span><h3 data-zh="自由与民主——杜绝专制" data-en="Freedom and Democracy — Prevent Authoritarian Rule">自由与民主——杜绝专制</h3><p data-zh="任何个人、组织或中心化权力都不得凌驾于公民自由之上；权力必须受到规则与制衡。" data-en="No individual, organization or centralized power may stand above citizens’ freedoms; power must be constrained by rules and checks.">任何个人、组织或中心化权力都不得凌驾于公民自由之上；权力必须受到规则与制衡。</p></article>
+    <article class="foundation"><span>04</span><h3 data-zh="平等与包容——拒绝特权" data-en="Equality and Inclusion — Reject Privilege">平等与包容——拒绝特权</h3><p data-zh="无论性别、信仰、种族或背景，公民都应享有平等的权利与机会，拒绝特权阶层。" data-en="Regardless of gender, belief, race or background, everyone should enjoy equal rights and opportunities.">无论性别、信仰、种族或背景，公民都应享有平等的权利与机会，拒绝特权阶层。</p></article>
+    <article class="foundation"><span>05</span><h3 data-zh="透明与公正——防止暴政" data-en="Transparency and Justice — Guard Against Tyranny">透明与公正——防止暴政</h3><p data-zh="治理过程公开、可审计、可追溯；区块链记录与 AI 辅助分析接受公众验证。" data-en="Governance should be open, auditable and traceable, with verifiable records and AI-assisted analysis subject to public scrutiny.">治理过程公开、可审计、可追溯；区块链记录与 AI 辅助分析接受公众验证。</p></article>
+    <article class="foundation"><span>06</span><h3 data-zh="去中心化 AI 辅助自治——消解独裁根源" data-en="Decentralized AI-Assisted Self-Governance">去中心化 AI 辅助自治——消解独裁根源</h3><p data-zh="以去中心化架构打破权力垄断，推动民主自治、分权制衡；AI 辅助而不取代人的决定。" data-en="Use decentralized architecture to counter power monopolies and support self-governance and checks and balances; AI assists but does not replace human decisions.">以去中心化架构打破权力垄断，推动民主自治、分权制衡；AI 辅助而不取代人的决定。</p></article>
+    <article class="foundation"><span>07</span><h3 data-zh="全民基本收入（UBI）——消除依附关系" data-en="Universal Basic Income — Reduce Dependency">全民基本收入（UBI）——消除依附关系</h3><p data-zh="研究 AI 自动化时代财富共享与基本收入的可行机制，目标是保障基本生活、释放人的创造力。" data-en="Research feasible models for sharing automation-driven wealth and basic income to support basic needs and unlock human creativity.">研究 AI 自动化时代财富共享与基本收入的可行机制，目标是保障基本生活、释放人的创造力。</p></article>
+    <article class="foundation"><span>08</span><h3 data-zh="持续创新——抵御制度僵化" data-en="Continuous Innovation — Resist Institutional Rigidity">持续创新——抵御制度僵化</h3><p data-zh="以人类福祉为核心，在共识驱动下持续检验、修订和迭代制度，防止僵化与腐败。" data-en="Keep institutions under continuous review and iteration through consensus, with human well-being at the centre.">以人类福祉为核心，在共识驱动下持续检验、修订和迭代制度，防止僵化与腐败。</p></article>
+  </div>
 </section>
-<section class="join section" id="join"><div class="join-panel"><div class="join-orb"></div><div class="eyebrow">05 — FOUNDING TEAM / OPEN CALL</div><h2 data-i18n="joinTitle">创世团队招募 · 邀请共建者</h2><p data-i18n="joinDesc">DAADR 邀请不同背景的人参与讨论、研究、审查与建设。你不需要先认同所有答案；严谨的质疑本身就是共建的一部分。</p><div class="recruit-grid">
- <article><b>01 / TECHNOLOGY</b><h3 data-i18n="roleTech">技术与开源开发</h3><p data-i18n="roleTechP">前端、后端、AI工具、区块链与网络安全。</p></article>
- <article><b>02 / GOVERNANCE</b><h3 data-i18n="roleGov">治理与制度研究</h3><p data-i18n="roleGovP">民主机制、制度设计、公共政策与协作流程。</p></article>
- <article><b>03 / LAW & POLICY</b><h3 data-i18n="roleLaw">法律与合规</h3><p data-i18n="roleLawP">组织架构、数据保护、跨境合规与知识产权。</p></article>
- <article><b>04 / ECONOMICS</b><h3 data-i18n="roleEco">经济与 UBI 研究</h3><p data-i18n="roleEcoP">经济模型、公共财政、激励机制与分配研究。</p></article>
- <article><b>05 / DESIGN</b><h3 data-i18n="roleDesign">产品与视觉设计</h3><p data-i18n="roleDesignP">用户体验、品牌视觉、无障碍与多语言内容。</p></article>
- <article><b>06 / COMMUNITY</b><h3 data-i18n="roleCom">国际传播与社区</h3><p data-i18n="roleComP">翻译、编辑、研究传播、社群组织与活动协作。</p></article>
- </div><div class="join-actions"><a class="btn btn-gold" href="https://github.com/xnxin69-collab/DAADR-Official/issues/new" target="_blank" rel="noopener" data-i18n="joinGithub">提交加入意向 / GitHub ↗</a><a class="btn btn-outline" href="https://x.com/ZUIucgQImBFYaf2" target="_blank" rel="noopener" data-i18n="followX">关注 X 官方动态 ↗</a></div></div>
+
+<section class="section governance-section" id="governance">
+  <div class="section-kicker">03 / GOVERNANCE EXPERIMENT</div>
+  <div class="section-heading"><div><h2 data-zh="让治理过程可见、可参与、可审计" data-en="Governance made visible, participatory and auditable">让治理过程可见、可参与、可审计</h2><p data-zh="探索一条由人类掌握主权、AI 提供辅助的治理流程。" data-en="Exploring a process where humans retain sovereignty and AI provides assistance.">探索一条由人类掌握主权、AI 提供辅助的治理流程。</p></div></div>
+  <div class="governance-flow">
+    <div class="flow-step"><b>01</b><strong data-zh="提出议题" data-en="Proposal">提出议题</strong><small data-zh="公民发起提案" data-en="Citizens submit proposals">公民发起提案</small></div><i>→</i>
+    <div class="flow-step"><b>02</b><strong data-zh="AI 辅助分析" data-en="AI Analysis">AI 辅助分析</strong><small data-zh="整理资料与影响" data-en="Evidence and impact">整理资料与影响</small></div><i>→</i>
+    <div class="flow-step"><b>03</b><strong data-zh="公开讨论" data-en="Open Discussion">公开讨论</strong><small data-zh="质询、修订与协商" data-en="Review and deliberation">质询、修订与协商</small></div><i>→</i>
+    <div class="flow-step"><b>04</b><strong data-zh="公民表决" data-en="Human Vote">公民表决</strong><small data-zh="按规则形成决定" data-en="Decision under rules">按规则形成决定</small></div><i>→</i>
+    <div class="flow-step"><b>05</b><strong data-zh="执行与审计" data-en="Execution & Audit">执行与审计</strong><small data-zh="记录结果并复核" data-en="Record and review">记录结果并复核</small></div>
+  </div>
+  <div class="governance-note"><span>ⓘ</span><p data-zh="当前页面展示的是治理流程概念模型，不代表链上投票、AI 审计或自动执行系统已经上线。任何实际治理决定都应保留人的知情权、复核权与申诉权。" data-en="This is a conceptual model, not a live voting, AI-audit or automated execution system. Real governance must preserve human awareness, review and appeal rights.">当前页面展示的是治理流程概念模型，不代表链上投票、AI 审计或自动执行系统已经上线。任何实际治理决定都应保留人的知情权、复核权与申诉权。</p></div>
 </section>
-<section class="support section" id="support"><div class="section-head"><div><div class="eyebrow">06 — SUPPORT THE PROJECT</div><h2 data-i18n="supportTitle">支持 DAADR · 让开放实验继续前进</h2></div><p data-i18n="supportLead">支持不只有资金。专业时间、知识、测试、传播和建设贡献，同样重要。</p></div>
- <div class="support-grid">
-  <article class="support-card"><span class="support-icon">↗</span><h3 data-i18n="supportShare">传播与分享</h3><p data-i18n="supportShareP">分享项目理念、网站和公开资料，帮助更多人了解并提出独立意见。</p><a href="https://x.com/ZUIucgQImBFYaf2" target="_blank" rel="noopener" data-i18n="supportShareA">关注并转发项目动态 ↗</a></article>
-  <article class="support-card"><span class="support-icon">⌘</span><h3 data-i18n="supportBuild">技术与内容贡献</h3><p data-i18n="supportBuildP">帮助测试网站、审阅文档、翻译内容、提交代码或提出改进建议。</p><a href="https://github.com/xnxin69-collab/DAADR-Official/issues/new" target="_blank" rel="noopener" data-i18n="supportBuildA">提交建议或问题 ↗</a></article>
-  <article class="support-card"><span class="support-icon">◎</span><h3 data-i18n="supportResearch">研究与专业支持</h3><p data-i18n="supportResearchP">提供治理、法律、经济、AI伦理、隐私与安全方面的专业审阅。</p><a href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener" data-i18n="supportResearchA">查看项目资料 ↗</a></article>
- </div>
- <div class="funding-note"><div class="eyebrow">FINANCIAL TRANSPARENCY</div><h3 data-i18n="fundingTitle">关于资金支持与捐赠</h3><p data-i18n="fundingText">目前 DAADR 尚未在本网站启用收款、捐赠或 Token 募资。待组织主体、适用法律、资金托管、预算披露、独立审计及退款规则明确后，才会公布经过核验的正式支持渠道。请勿向任何未经官方核实的地址转账。</p><span data-i18n="fundingStatus">当前状态：非财务支持开放；正式捐赠渠道尚未启用。</span></div>
+
+<section class="section join-section" id="join">
+  <div class="section-kicker">04 / FOUNDING TEAM</div>
+  <div class="section-heading"><div><h2 data-zh="加入创世团队，共同把愿景变成实践" data-en="Join the founding team and turn vision into practice">加入创世团队，共同把愿景变成实践</h2><p data-zh="我们欢迎认同开放协作、愿意贡献专业能力的全球伙伴。" data-en="We welcome collaborators worldwide who value openness and want to contribute their expertise.">我们欢迎认同开放协作、愿意贡献专业能力的全球伙伴。</p></div></div>
+  <div class="team-grid">
+    <article><b>01</b><h3 data-zh="技术与开源开发" data-en="Technology & Open Source">技术与开源开发</h3><p data-zh="网站、平台、智能合约、网络安全与 AI 工具" data-en="Web, platform, smart contracts, security and AI tools">网站、平台、智能合约、网络安全与 AI 工具</p></article>
+    <article><b>02</b><h3 data-zh="治理与制度研究" data-en="Governance & Institutions">治理与制度研究</h3><p data-zh="民主机制、分权制衡、协商与制度设计" data-en="Democratic mechanisms, checks and balances, deliberation">民主机制、分权制衡、协商与制度设计</p></article>
+    <article><b>03</b><h3 data-zh="法律与合规" data-en="Law & Compliance">法律与合规</h3><p data-zh="跨境组织、数据保护、知识产权与合规研究" data-en="Cross-border structures, data protection and IP">跨境组织、数据保护、知识产权与合规研究</p></article>
+    <article><b>04</b><h3 data-zh="经济与 UBI 研究" data-en="Economics & UBI Research">经济与 UBI 研究</h3><p data-zh="自动化经济、财富分配与可持续模型" data-en="Automation economics, distribution and sustainable models">自动化经济、财富分配与可持续模型</p></article>
+    <article><b>05</b><h3 data-zh="产品与视觉设计" data-en="Product & Visual Design">产品与视觉设计</h3><p data-zh="用户体验、品牌、交互与无障碍设计" data-en="UX, brand, interaction and accessibility">用户体验、品牌、交互与无障碍设计</p></article>
+    <article><b>06</b><h3 data-zh="国际传播与社区" data-en="Global Outreach & Community">国际传播与社区</h3><p data-zh="翻译、研究传播、社区建设与伙伴协作" data-en="Translation, research communication and community building">翻译、研究传播、社区建设与伙伴协作</p></article>
+  </div>
+  <div class="join-callout"><div><h3 data-zh="你愿意贡献什么？" data-en="What would you like to contribute?">你愿意贡献什么？</h3><p data-zh="请通过 GitHub 提交加入意向，介绍你的专业背景、可投入时间和感兴趣的方向。" data-en="Share your background, availability and interests through the project’s GitHub repository.">请通过 GitHub 提交加入意向，介绍你的专业背景、可投入时间和感兴趣的方向。</p></div><a class="gold-button" href="https://github.com/xnxin69-collab/DAADR-Official/issues/new" target="_blank" rel="noopener"><span data-zh="提交加入意向" data-en="Submit Interest">提交加入意向</span> <b>→</b></a></div>
 </section>
-<section class="resources section"><div class="section-head"><div><div class="eyebrow">07 — PUBLIC RECORDS</div><h2 data-i18n="resourceTitle">公开资料与项目档案</h2></div><p data-i18n="resourceLead">重要文件以 GitHub 仓库中的正式版本为准。</p></div><div class="resource-grid"><a class="resource-card" href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener"><span>01 / CODE</span><strong data-i18n="res1">官方 GitHub 仓库</strong><small>Source · Issues · Contributions ↗</small></a><a class="resource-card" href="https://github.com/xnxin69-collab/DAADR-Official/blob/main/DAADR-%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" rel="noopener"><span>02 / DECLARATION</span><strong data-i18n="res2">独立宣言与创世书</strong><small>Founding Declaration & Genesis ↗</small></a><a class="resource-card" href="https://x.com/ZUIucgQImBFYaf2" target="_blank" rel="noopener"><span>03 / UPDATES</span><strong data-i18n="res3">X 官方动态</strong><small>Announcements & discussion ↗</small></a></div></section>
+
+<section class="section support-section" id="support">
+  <div class="section-kicker">05 / SUPPORT THE PROJECT</div>
+  <div class="section-heading"><div><h2 data-zh="每一种建设性支持，都有价值" data-en="Every constructive contribution matters">每一种建设性支持，都有价值</h2><p data-zh="现阶段优先建立公开协作与可验证的项目基础。" data-en="At this stage, our priority is open collaboration and verifiable foundations.">现阶段优先建立公开协作与可验证的项目基础。</p></div></div>
+  <div class="support-grid">
+    <article><span>↗</span><h3 data-zh="传播与分享" data-en="Share the Vision">传播与分享</h3><p data-zh="分享项目介绍、网站与公开资料，帮助更多人了解并提出建设性意见。" data-en="Share the project, website and public materials to invite awareness and constructive feedback.">分享项目介绍、网站与公开资料，帮助更多人了解并提出建设性意见。</p><a href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener" data-zh="访问项目仓库 →" data-en="Visit repository →">访问项目仓库 →</a></article>
+    <article><span>⌘</span><h3 data-zh="技术与内容贡献" data-en="Technical & Content Contributions">技术与内容贡献</h3><p data-zh="参与代码、翻译、文档、研究、设计与测试，让项目逐步变得可用、可审查。" data-en="Contribute code, translation, documentation, research, design or testing.">参与代码、翻译、文档、研究、设计与测试，让项目逐步变得可用、可审查。</p><a href="https://github.com/xnxin69-collab/DAADR-Official/issues" target="_blank" rel="noopener" data-zh="查看协作议题 →" data-en="Explore issues →">查看协作议题 →</a></article>
+    <article><span>◇</span><h3 data-zh="专业与研究支持" data-en="Expertise & Research">专业与研究支持</h3><p data-zh="欢迎法律、经济、治理、教育、AI 安全等领域的专业意见与合作研究。" data-en="We welcome expertise and research in law, economics, governance, education and AI safety.">欢迎法律、经济、治理、教育、AI 安全等领域的专业意见与合作研究。</p><a href="https://github.com/xnxin69-collab/DAADR-Official/issues/new" target="_blank" rel="noopener" data-zh="联系项目团队 →" data-en="Contact the project →">联系项目团队 →</a></article>
+  </div>
+  <div class="transparency-note"><strong data-zh="关于资金支持的透明说明" data-en="A note on financial support">关于资金支持的透明说明</strong><p data-zh="目前网站不收取捐款，也不提供钱包地址、代币或投资回报承诺。未来如建立资金支持机制，将先公开法律主体、资金用途、管理权限、审计与退款规则，再开放正式渠道。" data-en="This website does not currently accept donations or offer wallet addresses, tokens or return promises. Any future funding mechanism will first disclose its legal entity, use of funds, controls, audits and refund rules.">目前网站不收取捐款，也不提供钱包地址、代币或投资回报承诺。未来如建立资金支持机制，将先公开法律主体、资金用途、管理权限、审计与退款规则，再开放正式渠道。</p></div>
+</section>
+
+<section class="closing">
+  <div class="closing-line"></div>
+  <h2 data-zh="携手共建 · 共创未来" data-en="Together for a Better Future">携手共建 · 共创未来</h2>
+  <p>TOGETHER, WE BUILD WHAT COMES NEXT.</p>
+</section>
 </main>
-<footer class="footer"><a class="brand" href="#home"><span class="brand-mark">D<span>✦</span></span><span class="brand-name">DAADR <small>OPEN CIVIC EXPERIMENT</small></span></a><p data-i18n="footerText">以去中心化治理为根基，以代码为宪法、以AI为公仆、以自由为终极目的。</p><div class="footer-bottom"><span>© <span id="year"></span> DAADR · PILOT ZONE</span><span data-i18n="footerNote">理念开放 · 规则透明 · 人类主权</span></div></footer>
-<script src="./assets/app.js"></script>
+<footer class="site-footer">
+  <div class="footer-brand"><img src="assets/logo-mark.svg" alt=""><strong>DAADR</strong></div>
+  <p data-zh="去中心化AI自治自由民主共和国（试验区）" data-en="Decentralized AI Autonomous Democratic Republic (Pilot Zone)">去中心化AI自治自由民主共和国（试验区）</p>
+  <div class="footer-links"><a href="#mission" data-zh="使命与愿景" data-en="Mission & Vision">使命与愿景</a><a href="#foundations" data-zh="八大基石" data-en="Foundations">八大基石</a><a href="#join" data-zh="加入我们" data-en="Join Us">加入我们</a><a href="https://github.com/xnxin69-collab/DAADR-Official" target="_blank" rel="noopener">GitHub</a></div>
+  <small>© <span id="year"></span> DAADR · <span data-zh="开放实验，持续演进" data-en="Open Experiment · Continuous Evolution">开放实验，持续演进</span></small>
+</footer>
+<script src="assets/app.js"></script>
 </body></html>
